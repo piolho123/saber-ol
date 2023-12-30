@@ -346,7 +346,7 @@ body.open .background {
 }
 
 body.open .navbar-burger {
-    background-image: url("./assets/close.svg");
+    background-image: url("./x.svg");
 }
 
 .navbar-search {
