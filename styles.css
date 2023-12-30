@@ -1,9 +1,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
     body {
         margin: 0;
-        background: rgb(27 32 44 / 100%);
+        background: #1b202c;
         color: #f9f9f9;
         font-family: "Euclid Circular A", "Poppins";
+        user-select: none;
     }
     
     * {
@@ -140,8 +141,9 @@
     }
     
     .whatzapp:hover {
-        background-color: #48076b;
+        background-color: #B31DD1;
         box-shadow: rgba(212, 0, 255, 0.25) 0px 54px 55px, rgba(195, 0, 255, 0.12) 0px -12px 30px, rgba(174, 0, 255, 0.12) 0px 4px 6px, rgba(255, 0, 234, 0.17) 0px 12px 13px, rgba(212, 0, 255, 0.09) 0px -3px 5px;
+        scale: 1.1;
     }
     
     .whatzapp:hover .bell {
@@ -326,14 +328,14 @@
     }
     
     .navbar-burger {
-        z-index: 3;
+        z-index: 4;
         top: 0;
         right: 0;
         display: grid;
         place-items: center;
         width: 72px;
         height: 72px;
-        background-image: url("./assets/menu.svg");
+        background-image: url("menu.svg");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -387,3 +389,25 @@
             opacity: 1;
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+    
+/* Barra De Rolamento */
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: #1b202c;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-image: linear-gradient(#1b202c, #1b202c, #d000fa,#d000fa, #1b202c, #1b202c);
+}
