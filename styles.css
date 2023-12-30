@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    background: rgb(27 32 44 / 100%);
+    color: #f9f9f9;
+    font-family: "Euclid Circular A", "Poppins";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 85px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b202cb3;
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    backface-visibility: hidden;
+    transform: translateZ(0px);
+    transition: 0.3s;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav i {
+    font-size: 30px;
+    color: #f9f9f9;
+}
+
+main {
+    padding: 10px 30px;
+}
+
+article {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto 32px;
+    border-radius: 16px;
+    background-color: #272e3c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+article img {
+    height: 60px;
+}
+
+article name {
+    color: rgb(255 255 255 / 50%);
+}
+
+article p {
+    margin: 8px 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.button {
+    transform: translate(-50%, -50%);
+    top: 10px;
+    left: 50%;
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #272e3c;
+    overflow: hidden;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #B31DD1;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 200px #B31DD1;
+    color: #fff;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
+
+.whatzapp {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B31DD1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .3s;
+    border: none;
+    z-index: 3;
+    top: 85%;
+    left: 90%;
+}
+
+.bell {
+    width: 18px;
+}
+
+.bell path {
+    fill: white;
+}
+
+.whatzapp:hover {
+    background-color: #48076b;
+    box-shadow: rgba(212, 0, 255, 0.25) 0px 54px 55px, rgba(195, 0, 255, 0.12) 0px -12px 30px, rgba(174, 0, 255, 0.12) 0px 4px 6px, rgba(255, 0, 234, 0.17) 0px 12px 13px, rgba(212, 0, 255, 0.09) 0px -3px 5px;
+}
+
+.whatzapp:hover .bell {
+    animation: bellRing 0.9s both;
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    width: 18rem;
+    height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #e700fc, #d000fa #380766);
+    flex-wrap: row wrap;
+    z-index: 1;
+    top: 30%;
+    left: 1500px;
+    cursor: pointer;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #272e3c;
+    z-index: 2;
+}
+
+.notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: #d000fa;
+    transition: transform 300ms ease;
+    z-index: 4;
+}
+
+.notification:hover:after {
+    transform: translateX(0.15rem)
+}
+
+.notititle {
+    color: #d000fa;
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.notification:hover .notititle {
+    transform: translateX(0.15rem)
+}
+
+.notibody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.notification:hover .notibody {
+    transform: translateX(0.25rem)
+}
+
+.notiglow,
+.notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.notiglow {
+    z-index: 3;
+}
+
+.notiborderglow {
+    z-index: 1;
+}
+
+.notification:hover .notiglow {
+    opacity: 0.1
+}
+
+.notification:hover .notiborderglow {
+    opacity: 0.1
+}
+
+.note {
+    color: #d000fa;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+}
+
+@keyframes notification {
+    from {
+        opacity: 1
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.notification {
+    animation: notification 1s 20s forwards;
+}
+
+@media screen and (max-width: 1020px) {
+    .notification {
+        top: 300px;
+        left: 0px;
+        scale: 0.7;
+    }
+    .whatzapp {
+        left: 80%;
+    }
+}
